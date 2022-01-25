@@ -10,6 +10,7 @@ int main(int argc, char **argv)
 	char		*str	= argv[1];
 	int		d	= atoi(argv[2]);
 	unsigned int	x	= atoi(argv[3]);
+	char 		*snull 	= NULL;
 
 	ft_printf("Hello %s\n", str);
 	printf("Hello %s\n", str);
@@ -17,8 +18,11 @@ int main(int argc, char **argv)
 	ft_printf("Number %d\n", d);
 	printf("Number %d\n", d);
 
-	ft_printf("%x\n", x);
-	printf("%x\n.\n", x);
-		
+	ft_printf("Hexa: %x\n", x);
+	printf("Hexa: %x\n", x);
+
+	ft_printf("snull: %s\n", snull);
+	printf("snull: %s\n", snull);
+
 	return (0);
 }

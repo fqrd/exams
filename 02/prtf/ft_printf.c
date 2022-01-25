@@ -84,6 +84,8 @@ int	ft_printf(const char *format, ...)
 	size_t count = 0;
 	size_t i = 0;
 	va_start(args, format);
+	if (!format)
+		return (-1);
 	while (format[i])
 	{
 		if (format[i] != '%')
