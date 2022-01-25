@@ -13,7 +13,6 @@ int	empty_string(char **line)
 	*line = malloc(sizeof(char) * 1);
 	if (!*line)
 		return (-1);
-	// printf("empty_string (%p)\n", *line);
 	*line[0] = '\0';
 	return (1);
 }
@@ -41,16 +40,9 @@ int	concat(char **rest, char *buffer, size_t len)
 	tmp[i] = buffer[0];
 	if (*rest)
 	{
-		// printf("concat + free rest (%p)\n", *rest);
 		free(*rest);
 	}
-	else
-	{
-		// printf("no rest to free\n");
-	}
-	// printf("tmp (%p)\n", tmp);
 	*rest = tmp;
-	// printf("rest (%p)\n", *rest);
 	return (1);
 }
 
