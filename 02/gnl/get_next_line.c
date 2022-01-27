@@ -12,7 +12,7 @@ int	empty_string(char **line)
 {
 	*line = malloc(sizeof(char) * 1);
 	if (!*line)
-		return (-1);
+		return (0);
 	*line[0] = '\0';
 	return (1);
 }
@@ -29,7 +29,7 @@ int	concat(char **rest, char *buffer, size_t len)
 		{	
 			free(*rest);
 		}
-		return (-1);
+		return (0);
 	}
 	tmp[len + 1] = '\0';
 	while (rest && *rest && (*rest)[i])
